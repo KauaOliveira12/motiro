@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a equipe da Motirõ — estudantes do IFSP Campus Guarulhos comprometidos com a inclusão digital.">
+  <title>Nossa Equipe — Motirõ</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+  <style>
+    .persona-expandida {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 32px;
+      transition: var(--transicao);
+    }
+    .persona-expandida:hover { box-shadow: 0 12px 40px var(--sombra); }
+    .persona-exp-header {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 280px;
+    }
+    .persona-exp-foto {
+      position: relative;
+      overflow: hidden;
+    }
+    .persona-exp-foto img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .persona-exp-badge {
+      position: absolute;
+      bottom: 16px; left: 16px;
+      background: var(--verde-primario);
+      color: var(--branco);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .persona-exp-info {
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .persona-exp-info .role {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--verde-vivo);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .persona-exp-info h3 {
+      font-size: 2rem;
+      color: var(--verde-primario);
+      margin-bottom: 14px;
+    }
+    .persona-exp-info .bio {
+      font-size: 0.95rem;
+      color: var(--texto-medio);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+    .persona-exp-body {
+      border-top: 1px solid var(--borda);
+      padding: 28px 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .persona-exp-col h5 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--verde-primario);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .persona-exp-col p,
+    .persona-exp-col li {
+      font-size: 0.88rem;
+      color: var(--texto-medio);
+      line-height: 1.7;
+    }
+    .persona-exp-col ul { padding-left: 0; }
+    .persona-exp-col li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .persona-exp-col li::before {
+      content: '→';
+      color: var(--verde-claro);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .tags-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 768px) {
+      .persona-exp-header { grid-template-columns: 1fr; }
+      .persona-exp-foto   { height: 240px; }
+      .persona-exp-info   { padding: 24px; }
+      .persona-exp-body   { grid-template-columns: 1fr; padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar solid" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+            <img src="assets/logo.jpeg" alt="Logo Motirõ" onerror="this.style.display='none'">
+        <div class="navbar-logo-text">
+          MOTIRÕ
+          <span>Tecnologia Para Todos</span>
+        </div>
+      </a>
+      <ul class="navbar-nav" id="navMenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="personas.html" class="active">Nossa Equipe</a></li>
+        <li><a href="contato.html" class="btn-nav">Fale Conosco</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="section-label" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);color:#A5D6A7">Pessoas que Fazem Acontecer</span>
+      <h1>Nossa Equipe</h1>
+      <p>Estudantes do IFSP Campus Guarulhos unidos pelo propósito de transformar vidas por meio da tecnologia e da educação digital.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section" style="padding-bottom:40px">
+    <div class="container text-center">
+      <div style="max-width:720px;margin:0 auto;background:var(--verde-suave);border:1px solid var(--borda);border-radius:var(--radius-lg);padding:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+        <div>
+          <div style="font-family:var(--fonte-display);font-size:2.4rem;font-weight:700;color:var(--verde-primario)">5</div>
+          <div style="font-size:0.82rem;color:var(--texto-leve);font-weight:500">Integrantes</div>
+        </div>
+        <div>
+          <div style="font-family:var(--fonte-display);font-size:2.4rem;font-weight:700;color:var(--verde-primario)">4</div>
+          <div style="font-size:0.82rem;color:var(--texto-leve);font-weight:500">Áreas de Atuação</div>
+        </div>
+        <div>
+          <div style="font-family:var(--fonte-display);font-size:2.4rem;font-weight:700;color:var(--verde-primario)">1</div>
+          <div style="font-size:0.82rem;color:var(--texto-leve);font-weight:500">Propósito</div>
+        </div>
+        <div>
+          <div style="font-family:var(--fonte-display);font-size:2.4rem;font-weight:700;color:var(--verde-primario)">∞</div>
+          <div style="font-size:0.82rem;color:var(--texto-leve);font-weight:500">Impacto Possível</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONAS DETALHADAS -->
+  <section class="section" style="padding-top:24px" id="personas">
+    <div class="container">
+
+      <!-- KAUÃ -->
+      <div class="persona-expandida fade-up" id="kaua">
+        <div class="persona-exp-header">
+          <div class="persona-exp-foto">
+            <img src="assets/kaua.png" alt="Kauã dos Santos Oliveira">
+            <span class="persona-exp-badge">⭐ Scrum Master</span>
+          </div>
+          <div class="persona-exp-info">
+            <div class="role">Scrum Master &amp; Liderança</div>
+            <h3>Kauã dos Santos Oliveira</h3>
+            <p class="bio">
+              Estudante do curso de Engenharia de Computação no IFSP Guarulhos, Kauã é o Scrum Master
+              da equipe. Com experiência em facilitação de reuniões e gestão
+              de equipes multidisciplinares, garante que cada sprint seja entregue com qualidade e no prazo.
+            </p>
+            <div style="margin-top:16px">
+              <a href="mailto:kaua.oliveira1@aluno.ifsp.edu.br" style="font-size:0.88rem;color:var(--verde-vivo);font-weight:600">
+                ✉ kaua.oliveira1@aluno.ifsp.edu.br
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="persona-exp-body">
+          <div class="persona-exp-col">
+            <h5>📚 Formação</h5>
+            <ul>
+              <li>Engenharia de Computação — IFSP GRU(em andamento)</li>
+              <li>Técnico em Mecatrônica</li>
+            </ul>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🛠 Habilidades</h5>
+            <div class="tags-wrap">
+              <span class="hab-tag">HTML5</span>
+              <span class="hab-tag">CSS</span>
+              <span class="hab-tag">JavaScript</span>
+              <span class="hab-tag">Design</span>
+              <span class="hab-tag">Banco de Dados</span>
+              <span class="hab-tag">PHP</span>
+              <span class="hab-tag">Mecânica</span>
+              <span class="hab-tag">Eletrônica</span>
+            </div>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🎯 Responsabilidades na Motirõ</h5>
+            <ul>
+              <li>Facilitadora das cerimônias Scrum</li>
+              <li>Proteção e suporte ao time</li>
+              <li>Gestão do backlog e priorização</li>
+              <li>Ponto de contato com parceiros externos</li>
+              <li>Implementação e manutenção do sistema</li>
+              <li>Governança e gestão de dados</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEDRO -->
+      <div class="persona-expandida fade-up" id="pedro" style="transition-delay:.08s">
+        <div class="persona-exp-header">
+          <div class="persona-exp-foto">
+            <img src="assets/pedro4x5.jpg" alt="Pedro Câmara de Melo">
+            <span class="persona-exp-badge">💻 Dev Full Stack</span>
+          </div>
+          <div class="persona-exp-info">
+            <div class="role">Desenvolvimento de Software</div>
+            <h3>Pedro Câmara de Melo</h3>
+            <p class="bio">
+              Pedro é o arquiteto das soluções digitais da Motirõ. Estudante de Engenharia de Computação, ele alia
+              conhecimento técnico aprofundado a uma visão de produto centrada no usuário. Especializado em
+              desenvolvimento web e mobile, Pedro lidera a construção de sistemas acessíveis que funcionam bem
+              mesmo para quem está tendo o primeiro contato com a tecnologia.
+            </p>
+            <div style="margin-top:16px">
+              <a href="mailto:pedro.camara@aluno.ifsp.edu.br" style="font-size:0.88rem;color:var(--verde-vivo);font-weight:600">
+                ✉ pedro.camara@aluno.ifsp.edu.br
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="persona-exp-body">
+          <div class="persona-exp-col">
+            <h5>📚 Formação</h5>
+            <ul>
+              <li>Engenharia de Computação — IFSP GRU</li>
+            </ul>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🛠 Habilidades</h5>
+            <div class="tags-wrap">
+              <span class="hab-tag">HTML / CSS / JS</span>
+              <span class="hab-tag">PHP</span>
+              <span class="hab-tag">MySQL</span>
+              <span class="hab-tag">React</span>
+              <span class="hab-tag">Node.js</span>
+              <span class="hab-tag">Git</span>
+              <span class="hab-tag">Acessibilidade Web</span>
+            </div>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🎯 Responsabilidades na Motirõ</h5>
+            <ul>
+              <li>Desenvolvimento do portal institucional</li>
+              <li>Criação de sistemas para parceiros</li>
+              <li>Revisão de código e qualidade técnica</li>
+              <li>Integração de APIs e banco de dados</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- INACIO -->
+      <div class="persona-expandida fade-up" id="inacio" style="transition-delay:.16s">
+        <div class="persona-exp-header">
+          <div class="persona-exp-foto">
+            <img src="assets/inacio.jpeg" alt="Inácio de Souza de Oliveira">
+            <span class="persona-exp-badge">🎨 Designer</span>
+          </div>
+          <div class="persona-exp-info">
+            <div class="role">Desenvolvedor Front-End | Designer</div>
+            <h3>Inácio de Souza de Oliveira</h3>
+            <p class="bio">
+                Responsável pelo desenvolvimento web, auxiliando na criação e manutenção da página-web da startup, focando em mecânicas acessíveis com um design moderno.
+                Ainda que, é responsável pela identidade de Motirõ(logo, nome, cores, aparência do web-site), e também é um dos responsáveis por produzir os materiais didáticos e lecionar aos idosos.
+            </p>
+            <div style="margin-top:16px">
+              <a href="mailto:inacio.s@aluno.ifsp.edu.br" style="font-size:0.88rem;color:var(--verde-vivo);font-weight:600">
+                ✉ inacio.s@aluno.ifsp.edu.br
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="persona-exp-body">
+          <div class="persona-exp-col">
+            <h5>📚 Formação</h5>
+            <ul>
+              <li>Engenharia de Computação — IFSP GRU</li>
+            </ul>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🛠 Habilidades</h5>
+            <div class="tags-wrap">
+              <span class="hab-tag">Desenvolvimento Front-End</span>
+              <span class="hab-tag">PHP | HTML 5 | CSS | JAVASCRIPT</span>
+              <span class="hab-tag">REACT | NODE.JS</span>
+              <span class="hab-tag">Língua Inglesa</span>
+              <span class="hab-tag">Design</span>
+              <span class="hab-tag">Banco de Dados(MySQL)</span>
+              <span class="hab-tag">Acessibilidade Web</span>
+            </div>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🎯 Responsabilidades na Motirõ</h5>
+            <ul>
+              <li>Design de interfaces acessíveis</li>
+              <li>Pesquisa com usuários idosos</li>
+              <li>Identidade visual da marca</li>
+              <li>Materiais didáticos visuais</li>
+              <li>Desenvolvimento Web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GUSTAVO -->
+      <div class="persona-expandida fade-up" id="gustavo" style="transition-delay:.24s">
+        <div class="persona-exp-header">
+          <div class="persona-exp-foto">
+            <img src="assets/gustavo.jpeg" alt="Gustavo Tadeu Gallego da Silva">
+            <span class="persona-exp-badge">📊 Desenvolvedor Full Stack</span>
+          </div>
+          <div class="persona-exp-info">
+            <div class="role">Desenvolvedor Full Stack</div>
+            <h3>Gustavo Tadeu Gallego da Silva</h3>
+            <p class="bio">
+              Sou estudante de Engenharia da Computação pelo Instituto Federal de São
+              Paulo e tenho experiência prática em áreas que envolvem tecnologia,
+              educação e comunicação visual. Ao longo da minha trajetória, desenvolvi
+              não apenas conhecimentos técnicos, mas também habilidades
+              interpessoais que me permitem colaborar em equipe, comunicar ideias de
+              forma clara e adaptar-me a diferentes contextos de trabalho.
+            </p>
+            <div style="margin-top:16px">
+              <a href="mailto:gustavo.gallego@aluno.ifsp.edu.br" style="font-size:0.88rem;color:var(--verde-vivo);font-weight:600">
+                ✉ gustavo.gallego@aluno.ifsp.edu.br
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="persona-exp-body">
+          <div class="persona-exp-col">
+            <h5>📚 Formação</h5>
+            <ul>
+              <li>Engenharia de Computação — IFSP GRU(em andamento)</li>
+              <li>Cibersegurança (DIO)</li>
+              <li>Análise de Dados com Python (Alura)</li>
+            </ul>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🛠 Habilidades</h5>
+            <div class="tags-wrap">
+              <span class="hab-tag">MySQL</span>
+              <span class="hab-tag">Python</span>
+              <span class="hab-tag">Java</span>
+              <span class="hab-tag">PHP</span>
+              <span class="hab-tag">Figma</span>
+              <span class="hab-tag">Figma</span>
+            </div>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🎯 Responsabilidades na Motirõ</h5>
+            <ul>
+              <li>Desenvolvimento e codificação dos projetos</li>
+              <li>Documentação técnica dos projetos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- RODRIGO -->
+      <div class="persona-expandida fade-up" id="rodrigo" style="transition-delay:.32s">
+        <div class="persona-exp-header">
+          <div class="persona-exp-foto">
+            <img src="assets/rodrigo.jpeg" alt="Rodrigo Quadrante Freitas">
+            <span class="persona-exp-badge">Desenvolvedor back-end</span>
+          </div>
+          <div class="persona-exp-info">
+            <div class="role">Desenvolvedor back-end</div>
+            <h3>Rodrigo Quadrante Freitas</h3>
+            <p class="bio">
+              Sou estudante de Engenharia de Computação e possuo interesse em
+              eletrônicos e desenvolvimento de software. Gosto de desenvolver back-end
+              e circuitos em geral. No projeto da startup, desenvolvo o back-end.
+            </p>
+            <div style="margin-top:16px">
+              <a href="mailto:freitas.rodrigo@aluno.ifsp.edu.br" style="font-size:0.88rem;color:var(--verde-vivo);font-weight:600">
+                ✉ freitas.rodrigo@aluno.ifsp.edu.br
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="persona-exp-body">
+          <div class="persona-exp-col">
+            <h5>📚 Formação</h5>
+            <ul>
+              <li>Bacharelado em Engenharia de Computação — IFSP GRU (em andamento)</li>
+            </ul>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🛠 Habilidades</h5>
+            <div class="tags-wrap">
+              <span class="hab-tag">Programação em C, Java</span>
+              <span class="hab-tag">Desenvolvimento de circuitos</span>
+              <span class="hab-tag">Desenvolvimento back-end, front-end e full-stack</span>
+              <span class="hab-tag">Noções de eletrônica digital e analógica</span>
+            </div>
+          </div>
+          <div class="persona-exp-col">
+            <h5>🎯 Responsabilidades na Motirõ</h5>
+            <ul>
+              <li>Gerenciamento de banco de dados</li>
+              <li>Garantir escalabilidade e manutenibilidade do projeto</li>
+              <li>Trabalhar em conjunto com os desenvolvedores front-end e full-stack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA CONTATO -->
+  <section style="background:var(--verde-suave);padding:60px 24px;text-align:center;border-top:1px solid var(--borda)">
+    <div class="container">
+      <h2 style="color:var(--verde-primario);margin-bottom:12px">Quer trabalhar com a gente?</h2>
+      <p style="color:var(--texto-leve);max-width:500px;margin:0 auto 28px">
+        Somos estudantes do IFSP Guarulhos em constante aprendizado. Se você tem um projeto de inclusão digital,
+        adoraríamos conversar!
+      </p>
+      <a href="contato.html" class="btn btn-primary">Entre em Contato</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text">MOTIRÕ</div>
+        <p>Startup de educação e inclusão digital vinculada ao projeto de curricularização de extensão do IFSP Campus Guarulhos.</p>
+        <div class="tagline">Tecnologia Para Todos • Desde 2026</div>
+      </div>
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="index.html">Início</a>
+        <a href="quem-somos.html">Quem Somos</a>
+        <a href="personas.html">Nossa Equipe</a>
+        <a href="contato.html">Fale Conosco</a>
+      </div>
+      <div class="footer-col">
+        <h5>Integrantes</h5>
+        <a href="#kaua">Kauã dos Santos Oliveira</a>
+        <a href="#pedro">Pedro Câmara de Melo</a>
+        <a href="#inacio">Inácio de Souza de Oliveira</a>
+        <a href="#gustavo">Gustavo Tadeu Gallego da Silva</a>
+        <a href="#rodrigo">Rodrigo Quadrante Freitas</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contato</h5>
+        <a href="mailto:contato@motiro.com.br">contato@motiro.com.br</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Motirõ — Tecnologia Para Todos.</span>
+      <span>IFSP Campus Guarulhos — Curricularização de Extensão</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
