@@ -923,6 +923,138 @@ footer {
 .alert-success { background: var(--verde-suave); border: 1px solid var(--verde-claro); color: var(--verde-primario); }
 .alert-error   { background: #FFEBEE; border: 1px solid #EF9A9A; color: #C62828; }
 
+/* SWOT - Página */
+.swot-intro {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 48px;
+  align-items: center;
+}
+.swot-intro p { color: var(--texto-medio); line-height: 1.85; }
+.swot-summary { display: grid; gap: 14px; }
+.swot-summary div {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: 0 8px 28px var(--sombra);
+}
+.swot-summary strong {
+  display: block;
+  font-family: var(--fonte-display);
+  font-size: 2.3rem;
+  line-height: 1;
+  color: var(--verde-primario);
+}
+.swot-summary span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.86rem;
+  color: var(--texto-leve);
+  font-weight: 600;
+}
+.swot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+.swot-card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-top: 6px solid var(--verde-claro);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  min-height: 360px;
+  transition: var(--transicao);
+}
+.swot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 46px var(--sombra);
+}
+.swot-card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.swot-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--verde-suave);
+  color: var(--verde-primario);
+  font-family: var(--fonte-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.swot-card-head p {
+  font-size: 0.76rem;
+  color: var(--texto-leve);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.swot-card-head h3 {
+  color: var(--verde-primario);
+  margin-top: 2px;
+}
+.swot-question {
+  font-size: 0.92rem;
+  color: var(--texto-leve);
+  margin-bottom: 18px;
+}
+.swot-list { display: grid; gap: 10px; }
+.swot-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--texto-medio);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.swot-list li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verde-claro);
+  margin-top: 9px;
+  flex-shrink: 0;
+}
+.swot-strength { border-top-color: #2E7D32; }
+.swot-weakness { border-top-color: #C62828; }
+.swot-opportunity { border-top-color: #0277BD; }
+.swot-threat { border-top-color: #EF6C00; }
+.swot-strength .swot-icon { background: #E8F5E9; color: #1B5E20; }
+.swot-weakness .swot-icon { background: #FFEBEE; color: #B71C1C; }
+.swot-opportunity .swot-icon { background: #E1F5FE; color: #01579B; }
+.swot-threat .swot-icon { background: #FFF3E0; color: #E65100; }
+.swot-action-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.swot-action-layout p { color: var(--texto-medio); line-height: 1.85; }
+.swot-actions {
+  background: var(--verde-suave);
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+.swot-actions h3 { color: var(--verde-primario); margin-bottom: 18px; }
+.swot-actions ol { padding-left: 20px; }
+.swot-actions li {
+  color: var(--texto-medio);
+  margin-bottom: 12px;
+  padding-left: 6px;
+}
+
 /* ────────────────────────────────────────────
    RESPONSIVO
 ──────────────────────────────────────────── */
@@ -930,6 +1062,7 @@ footer {
   .equipe-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .personas-grid { grid-template-columns: repeat(2, 1fr); }
+  .swot-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -960,6 +1093,9 @@ footer {
   .form-box { padding: 28px; }
   .acao-detalhe-item { grid-template-columns: 1fr; }
   .acao-detalhe-num { font-size: 2rem; }
+  .swot-intro,
+  .swot-action-layout { grid-template-columns: 1fr; }
+  .swot-card { min-height: auto; padding: 24px; }
 }
 
 @media (max-width: 480px) {
